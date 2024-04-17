@@ -60,6 +60,10 @@ h2 {
   cursor: url('assets/mallet.png'), pointer;
 }
 
+.mallet-cursor {
+    cursor: url('assets/mallet.png'), auto;
+}
+
 .hole {
   flex: 1 0 33.33%;
   overflow: hidden;
