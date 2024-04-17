@@ -1,8 +1,7 @@
-const timerDisplay = document.querySelector('#timer'); // use querySelector() to get the timer element.
-const cursor = document.querySelector("#cursor");
-
-
-cursor.classList.add('assets/mallet.png');
+document.addEventListener('DOMContentLoaded', () => {
+    const timerDisplay = document.querySelector('#timer');
+    const cursor = document.querySelector("#cursor");
+    cursor.style.cursor = "url('assets/mallet.png'), auto";
 
 let time = 25;
 let timer;
@@ -42,7 +41,8 @@ console.log(startButton);
 
 if (startButton) { 
   startButton.addEventListener("click", startGame);
-}
+  }
+
 /**
  * Sets the time delay given a difficulty parameter.
  *
