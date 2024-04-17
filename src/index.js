@@ -1,7 +1,8 @@
 const timerDisplay = document.querySelector('#timer'); // use querySelector() to get the timer element.
 const cursor = document.querySelector("#cursor");
 
-cursor.style.cursor = "url('assets/mallet.png'), auto";
+
+cursor.classList.add('assets/mallet.png');
 
 let time = 25;
 let timer;
