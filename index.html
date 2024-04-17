@@ -1,44 +1,44 @@
-<html>
-  <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mole Mash</title>
-
-    <link rel="stylesheet" href="./src/styles.css">
-  </head>
-  <body>
-    <h1 id="title">Mole Mash</h1> <!--Name of game-->
-    <div class="difficulty"> <!--Select difficulty level-->
-      <div>
-        <input type="radio" name="level" id="easy"> <!--Difficulty level easy-->
-        <label for="easy">Easy</label>
-      </div>
-      <div>
-        <input type="radio" name="level" id="normal"> <!--Difficulty level normal-->
-        <label for="normal">Normal</label>
-      </div>
-      <div>
-        <input type="radio" name="level" id="hard" checked> <!--Difficulty level deaulted to hard-->
-        <label for="hard">Hard</label>
-      </div>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mole Mash</title>
+  <link rel="stylesheet" href="./src/styles.css">
+</head>
+<body>
+  <h1 id="title">Mole Mash</h1>
+  <div class="difficulty">
+    <div>
+      <input type="radio" name="level" id="easy">
+      <label for="easy">Easy</label>
     </div>
-      <div>
-        <h2>Click start to play!</h2> <!--Instructions on how to begin game-->
+    <div>
+      <input type="radio" name="level" id="normal">
+      <label for="normal">Normal</label>
+    </div>
+    <div>
+      <input type="radio" name="level" id="hard" checked>
+      <label for="hard">Hard</label>
+    </div>
+  </div>
+  <div>
+    <h2>Click start to play!</h2>
     <div class="controls">    
-        <button id="startButton">Start</button> <!--Start button-->
-      </div>
-      <div>
-        <h1 id="score">0</h1> <!--Shows score-->
-      </div>
-      <div>
-        <h1><span id="timer">0</span> seconds left.</h1> <!--Shows timer-->
-      </div>
+      <button id="startButton">Start</button>
+    </div>
+    <div>
+      <h1 id="score">0</h1>
+    </div>
+    <div>
+      <h1><span id="timer">0</span> seconds left.</h1>
+    </div>
   </div>  
-  <div class="grid"> <!--Game background-->
+  <div class="grid">
     <div id="hole0" class="hole show">
-  <img src="assets/hole.png" alt="Hole">
-      <div id="mole0" class="mole"></div> <!--Mole-->
-   <img src= "assets/mole.png" alt="Mole">
+      <img src="assets/hole.png" alt="Hole">
+      <div id="mole0" class="mole"></div>
+      <img src="assets/mole.png" alt="Mole">
     </div>
     <div id="hole1" class="hole show">
   <img src="assets/hole.png" alt="Hole">
