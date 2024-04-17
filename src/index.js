@@ -1,7 +1,7 @@
 const timerDisplay = document.querySelector('#timer'); // use querySelector() to get the timer element.
 const cursor = document.querySelector("#cursor");
 
-cursor.style.cursor = "url('assets\mallet.png'), auto";
+cursor.style.cursor = "url('assets/mallet.png'), auto";
 
 let time = 25;
 let timer;
@@ -22,7 +22,7 @@ function startGame(){
   setDuration(25);
   startTimer(); 
   showUp();
-  playAudio('assets\molesong.mp3')
+  playAudio('assets/molesong.mp3')
   return "game started";
 }
 
