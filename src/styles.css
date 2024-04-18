@@ -1,12 +1,13 @@
 html {
-  background: url('./assets/background.png') no-repeat center center fixed;
-  background: url('https://github.com/Thinkful-Ed/js-dev-final-capstone-starter/blob/main/assets/background.png?raw=true') no-repeat center center fixed;
+  background: url("./assets/background.png") no-repeat center center fixed;
+  background: url("https://github.com/Thinkful-Ed/js-dev-final-capstone-starter/blob/main/assets/background.png?raw=true")
+    no-repeat center center fixed;
   box-sizing: border-box;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover;
-  z-index:0;
+  z-index: 0;
   overflow: hidden;
 }
 
@@ -34,16 +35,16 @@ h2 {
 }
 
 .startButton {
-    text-align: center;
-    padding: 10px 25px;
-    outline: none;
-    font-style: bold;
-    font-size: 25px;
-    background-color: #0000ff;
-    color: #ffff00;
-    border: 0px;
-    box-shadow: 1px 2px 4px #0000ff;
-    cursor: pointer;
+  text-align: center;
+  padding: 10px 25px;
+  outline: none;
+  font-style: bold;
+  font-size: 25px;
+  background-color: #0000ff;
+  color: #ffff00;
+  border: 0px;
+  box-shadow: 1px 2px 4px #0000ff;
+  cursor: pointer;
 }
 
 #timer {
@@ -57,11 +58,11 @@ h2 {
   display: flex;
   flex-wrap: wrap;
   margin: 0 auto;
-  cursor: url('assets/mallet.png'), pointer;
+  cursor: url("assets/mallet.png"), pointer;
 }
 
 .mallet-cursor {
-    cursor: url('assets/mallet.png'), auto;
+  cursor: url("assets/mallet.png"), auto;
 }
 
 .hole {
@@ -70,7 +71,7 @@ h2 {
   position: relative;
   width: 33.33%;
   height: 33.33%;
-  top: -90%;
+  top: -80%;
 }
 
 .hole:after {
@@ -78,18 +79,18 @@ h2 {
   background: url("./assets/hole.png") bottom center no-repeat;
   /*background: url("https://github.com/Thinkful-Ed/js-dev-final-capstone-starter/blob/main/assets/hole.png?raw=true") bottom center no-repeat;*/
   background-size: 80%;
-  content:'';
+  content: "";
   width: 100%;
   height: 100%;
   position: absolute;
   bottom: 0;
   z-index: 2;
-  pointer-events:none;
+  pointer-events: none;
 }
 
 .mole {
   /*background:url('./assets/mole.png') bottom center no-repeat;*/
-  background:url('assets/mole.png') bottom center no-repeat;
+  background: url("assets/mole.png") bottom center no-repeat;
   background-size: 40%;
   position: absolute;
   top: 50%;
@@ -97,7 +98,7 @@ h2 {
   height: 50%;
   transition: transform all 0.5s;
   transition: all 1s;
-  pointer-events:auto;
+  pointer-events: auto;
   opacity: 0; /* Initially hide the mole */
   transition: opacity 0.3s ease-in-out; /* Add transition for smooth appearance */
 }
@@ -106,22 +107,23 @@ h2 {
   opacity: 1; /* Make the mole visible when the hole has the 'show' class */
 }
 
-.score{
+.score {
   color: #ffff00;
   background-color: #0000ff;
   padding: 0 20px;
   border-radius: 1rem;
   display: flex;
   justify-content: space-between;
-font-size: 30px;
+  font-size: 30px;
 }
 
-.controls{
+.controls {
   margin: 5px;
   text-align: center;
 }
 
-*, *:before, *:after {
+*,
+*:before,
+*:after {
   box-sizing: border-box;
 }
-
