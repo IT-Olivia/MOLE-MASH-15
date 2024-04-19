@@ -1,3 +1,9 @@
+// document.addEventListener('DOMContentLoaded', () => {
+//   
+//   const cursor = document.querySelector("#cursor");
+//   cursor.style.cursor = "url('assets/mallet.png'), auto";
+// })
+
 const holes = document.querySelectorAll('.hole');
 const moles = document.querySelectorAll('.mole');
 let time = 25;
@@ -15,13 +21,6 @@ const timerDisplay = document.querySelector('#timer');
  * will return a random integer between 10 and 200.
  *
  */
-
-/**
-*
-* This is the function that starts the game when the `startButton`
-* is clicked.
-*
-*/
 function startGame() {
   setDuration(25);
   startTimer();
@@ -296,6 +295,16 @@ function stopGame() {
   clearInterval(timer);
   return "game stopped";
 }
+
+/**
+*
+* This is the function that starts the game when the `startButton`
+* is clicked.
+*
+*/
+
+
+
 
 function playAudio(audioPath) {
   const audio = new Audio(audioPath);
