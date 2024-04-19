@@ -53,6 +53,10 @@ h2 {
   text-align: left;
 }
 
+.mallet-cursor {
+  cursor: url("assets/mallet.png"), auto;
+}
+
 .grid {
   width: 800px;
   height: 400px;
@@ -62,9 +66,8 @@ h2 {
   cursor: url("assets/mallet.png"), pointer;
 }
 
-.mallet-cursor {
-  cursor: url("assets/mallet.png"), pointer;
-}
+
+
 
 .hole {
   flex: 1 0 33.33%;
@@ -75,8 +78,6 @@ h2 {
   top: -80%;
   
 }
-
-
 
 .hole:after {
   display: block;
@@ -139,8 +140,4 @@ h2 {
 *:before,
 *:after {
   box-sizing: border-box;
-}
-
-#h1 #timer{
-  text-align: left;
 }
