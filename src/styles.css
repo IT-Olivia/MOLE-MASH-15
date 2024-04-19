@@ -35,16 +35,19 @@ h2 {
 }
 
 .startButton {
-  text-align: center;
+  text-align: left;
   padding: 10px 25px;
   outline: none;
   font-style: bold;
   font-size: 25px;
+  border: 0px;
   background-color: #0000ff;
   color: #ffff00;
-  border: 0px;
   box-shadow: 1px 2px 4px #0000ff;
   cursor: pointer;
+  position: absolute;
+  left: 20px;
+  top: 20px;
 }
 
 #timer {
@@ -91,7 +94,7 @@ h2 {
 .mole {
   /*background:url('./assets/mole.png') bottom center no-repeat;*/
   background: url("assets/mole.png") bottom center no-repeat;
-  background-size: 20%;
+  background-size: 40%;
   position: absolute;
   top: 50%;
   width: 100%;
@@ -103,9 +106,6 @@ h2 {
   transition: opacity 0.3s ease-in-out; /* Add transition for smooth appearance */
 }
 
-.hole.up .mole {
-  top: 0;
-}
 .grid .hole.show .mole {
   opacity: 1; /* Make the mole visible when the hole has the 'show' class */
 }
