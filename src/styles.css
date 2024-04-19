@@ -94,8 +94,8 @@ h2 {
   background-size: 20%;
   position: absolute;
   top: 50%;
-  width: 100%;
-  height: 50%;
+  width: 50%;
+  height: 30%;
   transition: transform all 0.5s;
   transition: all 1s;
   pointer-events: auto;
