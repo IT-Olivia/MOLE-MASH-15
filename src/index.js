@@ -1,9 +1,3 @@
-// document.addEventListener('DOMContentLoaded', () => {
-//   
-//   const cursor = document.querySelector("#cursor");
-//   cursor.style.cursor = "url('assets/mallet.png'), auto";
-// })
-
 const holes = document.querySelectorAll('.hole');
 const moles = document.querySelectorAll('.mole');
 let time = 25;
