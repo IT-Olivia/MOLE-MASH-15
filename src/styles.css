@@ -91,7 +91,7 @@ h2 {
 .mole {
   /*background:url('./assets/mole.png') bottom center no-repeat;*/
   background: url("assets/mole.png") bottom center no-repeat;
-  background-size: 40%;
+  background-size: 20%;
   position: absolute;
   top: 50%;
   width: 100%;
