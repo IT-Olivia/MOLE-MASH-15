@@ -138,3 +138,18 @@ h2 {
   box-sizing: border-box;
 }
 
+.game-over-message {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 36px;
+  font-weight: bold;
+  color: red;
+  background: white;
+  padding: 20px;
+  border: 2px solid black;
+  display: none;
+}
+
+
