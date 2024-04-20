@@ -25,13 +25,7 @@ h2 {
   font-size: 40px;
   color: #0000ff;
   -webkit-text-stroke: 1px black;
-}
-
-.score {
-  text-align: center;
-  font-size: 10px;
-  color: white;
-  -webkit-text-stroke: 1px black;
+  margin-bottom: 80px;
 }
 
 .startButton {
@@ -78,6 +72,8 @@ h2 {
   top: -80%;
   
 }
+
+
 
 .hole:after {
   display: block;
@@ -141,3 +137,4 @@ h2 {
 *:after {
   box-sizing: border-box;
 }
+
