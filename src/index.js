@@ -16,12 +16,19 @@ const timerDisplay = document.querySelector('#timer');
  *
  */
 function startGame() {
+  // Reset the game
+  const gameOverMessage = document.getElementById('gameOverMessage');
+  gameOverMessage.style.display = 'none'; // Hide the message when game starts
+
   setDuration(25);
   startTimer();
   showUp();
-  playAudio('assets/molesong.mp3')
+  playAudio('assets/molesong.mp3');
+  document.body.classList.add('mallet-cursor');
+
   return "game started";
 }
+
 
 function randomInteger(min, max) {
   return Math.floor(Math.random() * (max - min + 1)) + min;
@@ -117,15 +124,15 @@ function chooseHole(holes) { //Selects a random hole from the list of holes
 *
 */
 function gameOver(time) {
-  // TODO: Write your code here
-  if (time > 0) { //If time is left, game will continue
-    return showUp();
+  if (time > 0) {
+    return showUp(); // Game continues
   } else {
-    console.log('Game over!'); //If no time left
-    stopGame();
+    console.log('Game over!'); // If time reaches zero
+    stopGame(); // Stops the game
     return "game stopped";
   }
 }
+
 
 
 /**
@@ -185,7 +192,9 @@ function toggleVisibility(hole) {
 */
 function updateScore() {
   // TODO: Write your code here
+
   const score = document.querySelector('#score > span');
+  console.log("Score updated. New score:", points);
   points++;
   score.textContent = points;
   return points;
@@ -251,7 +260,7 @@ function startTimer() { /* Starts timer*/
 function whack(event) {
   // TODO: Write your code here.
   console.log("whack!");
-  updateScore();
+  updateScore(); //Updates score each time mole is whacked
 }
 
 /**
@@ -285,17 +294,15 @@ function setDuration(duration) {
 *
 */
 function stopGame() {
-  // stopAudio(song);  //optional
   clearInterval(timer);
+
+  // Display the "Time's Up!" message
+  const gameOverMessage = document.getElementById('gameOverMessage');
+  gameOverMessage.style.display = 'block'; // Make the message visible
+
   return "game stopped";
 }
 
-/**
-*
-* This is the function that starts the game when the `startButton`
-* is clicked.
-*
-*/
 
 
 
@@ -304,15 +311,6 @@ function playAudio(audioPath) {
   const audio = new Audio(audioPath);
   audio.play();
 }
-
-
-// window.addEventListener("mousemove", (e) => {
-//   const { pageX: left, pageY: top } = e;
-//   cursor.style.cssText = `top: ${top}px; left: ${left}px;`;
-// });
-
-
-
 
 
 // Please do not modify the code below.
@@ -334,3 +332,5 @@ window.time = time;
 window.setDuration = setDuration;
 window.toggleVisibility = toggleVisibility;
 window.setEventListeners = setEventListeners;
+
+
