@@ -22,7 +22,7 @@ h1 {
 
 h2 {
   text-align: left;
-  font-size: 40px;
+  font-size: 30px;
   color: #0000ff;
   -webkit-text-stroke: 1px black;
   margin-bottom: 80px;
@@ -43,7 +43,7 @@ h2 {
 
 #timer {
   color: #ffff00; /* Yellow color */
-  font-size: 50px; /* Font size of 20 pixels */
+  font-size: 40px; /* Font size of 20 pixels */
   text-align: left; /*Align timer to left*/
   margin-left: 20px;
 }
@@ -126,7 +126,7 @@ h2 {
   border-radius: 1rem;
   display: flex;
   justify-content: space-between;
-  font-size: 30px;
+  font-size: 20px;
   text-align: right;
 }
 
