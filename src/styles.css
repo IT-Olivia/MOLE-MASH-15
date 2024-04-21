@@ -49,7 +49,7 @@ h2 { /* Styles all h2 elements*/
 }
 
 .mallet-cursor {
-  cursor: url("..assets/mallet.png"), auto; /* Changes cursor to mallet*/
+  cursor: url("../assets/mallet.png"), auto; /* Changes cursor to mallet*/
 }
 
 
@@ -59,7 +59,7 @@ h2 { /* Styles all h2 elements*/
   display: flex;
   flex-wrap: wrap;
   margin: 0 auto;
-  cursor: url("..assets/mallet.png"), pointer; /* Changes cursor into mallet*/
+  cursor: url("../assets/mallet.png"), pointer; /* Changes cursor into mallet*/
 }
 
 
