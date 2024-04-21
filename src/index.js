@@ -25,7 +25,7 @@ function startGame() {
   showUp();
   playAudio('assets/molesong.mp3');
   document.body.classList.add('mallet-cursor');
-
+  score = 0;
   return "game started";
 }
 
@@ -46,6 +46,11 @@ console.log(startButton);
 if (startButton) {
   startButton.addEventListener("click", startGame);
 }
+
+
+document.addEventListener('DOMContentLoaded', () => {
+  setEventListeners();  // Set up the mole clicking events after the page has loaded
+});
 
 /**
  * Sets the time delay given a difficulty parameter.
@@ -191,14 +196,13 @@ function toggleVisibility(hole) {
 *
 */
 function updateScore() {
-  // TODO: Write your code here
-
   const score = document.querySelector('#score > span');
-  console.log("Score updated. New score:", points);
   points++;
   score.textContent = points;
+  console.log("Score updated. New score:", points);
   return points;
 }
+
 
 
 /**
