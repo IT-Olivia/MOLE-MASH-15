@@ -196,9 +196,9 @@ function toggleVisibility(hole) {
 *
 */
 function updateScore() {
-  const score = document.querySelector('#score');
   points++;
-  score.textContent = points;
+  const scoreSpan = document.querySelector('#score'); 
+  scoreSpan.textContent = points;
   console.log("Score updated. New score:", points);
   return points;
 }
@@ -217,8 +217,9 @@ function clearScore() {
   // points = 0;
   // score.textContent = points;
   points = 0;
-  const scoreSpan = document.querySelector('#score > span');
+  const scoreSpan = document.querySelector('#score');
   scoreSpan.textContent = points;
+  console.log("Score cleared to:", points);
   return points;
 }
 
@@ -280,6 +281,9 @@ function setEventListeners() {
   });
 }
 
+document.addEventListener('DOMContentLoaded', () => {
+  setEventListeners(); 
+});
 /**
 *
 * This function sets the duration of the game. The time limit, in seconds,
@@ -304,6 +308,10 @@ function stopGame() {
   const gameOverMessage = document.getElementById('gameOverMessage');
   gameOverMessage.style.display = 'block'; // Make the message visible
 
+  clearScore();
+  document.body.classList.remove('mallet-cursor');
+
+  console.log("Game stopped, score reset, timer cleared.");
   return "game stopped";
 }
 
@@ -336,8 +344,5 @@ window.time = time;
 window.setDuration = setDuration;
 window.toggleVisibility = toggleVisibility;
 window.setEventListeners = setEventListeners;
-
-
-
 
 
