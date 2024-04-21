@@ -44,12 +44,14 @@ h2 {
 #timer {
   color: #ffff00; /* Yellow color */
   font-size: 50px; /* Font size of 20 pixels */
-  text-align: left;
+  text-align: left; /*Align timer to left*/
+  margin-left: 20px;
 }
 
 .mallet-cursor {
   cursor: url("assets/mallet.png"), auto;
 }
+
 
 .grid {
   width: 800px;
@@ -125,6 +127,7 @@ h2 {
   display: flex;
   justify-content: space-between;
   font-size: 30px;
+  text-align: right;
 }
 
 .controls {
@@ -145,11 +148,12 @@ h2 {
   transform: translate(-50%, -50%);
   font-size: 36px;
   font-weight: bold;
-  color: red;
-  background: white;
+  color: blue;
+  background: yellow;
   padding: 20px;
   border: 2px solid black;
   display: none;
+  text-align: top right;
 }
 
 
