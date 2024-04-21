@@ -9,18 +9,19 @@
 </head>
 
 <body>
-  <h1 id="title">Mole Mash</h1>
+  <h1 id="title">Mole Mash</h1> <!--Adds title to game-->
   <div class="controls">
-    <button id="startButton">Start</button>
+    <button id="startButton">Start</button> <!--Starts game and timer-->
   </div>
   <div>
-    <h2>Click start to play!</h2>
+    <h2>Click start to play!</h2> <!--Gives instructions on how to start game-->
     <div class="container">
-      <h2>Your Score: <span id="score">0</span></h2> 
-      <h2>Time: <span id="timer">0</span> seconds left.</h2>
+      <h2>Your Score: <span id="score">0</span></h2> <!--Shows score-->
+      <h2>Time: <span id="timer">0</span> seconds left.</h2> <!--Shows time left in game-->
     </div>
   </div>
-  <div class="difficulty">
+  
+  <div class="difficulty"> <!--Allows you to choose level of difficulty-->
     <div>
       <input type="radio" name="level" id="easy">
       <label for="easy">Easy</label>
@@ -37,47 +38,47 @@
  
 
   <div class="game-over-message" id="gameOverMessage" style="display: none;">
-    Time's Up!!!
+    Time's Up!!! <!--Let's you know when time has reached 0-->
   </div>
   
-  <div class="grid">
-    <div id="hole0" class="hole">
-      <img src="assets/hole.png" alt="Hole">
-      <div id="mole0" class="mole"><img src="assets/mole.png" alt="Mole"></div>
+  <div class="grid"> <!--Background of game-->
+    <div id="hole0" class="hole"> 
+      <img src="assets/hole.png" alt="Hole"> <!--Hole image-->
+      <div id="mole0" class="mole"><img src="assets/mole.png" alt="Mole"></div> <!--Mole image-->
     </div>
     <div id="hole1" class="hole">
-      <img src="assets/hole.png" alt="Hole">
+      <img src="assets/hole.png" alt="Hole"> <!--Hole image-->
       <div id="mole1" class="mole"><img src="assets/mole2.png" alt="Mole"></div> <!--Mole-->
     </div>
     <!--TODO: Add the missing holes and moles. -->
     <div id="hole2" class="hole">
-      <img src="assets/hole.png" alt="Hole"><!--Mole hole-->
+      <img src="assets/hole.png" alt="Hole"><!--Hole image-->
       <div id="mole2" class="mole"><img src="assets/mole.png" alt="Mole"></div> <!--Mole-->
     </div>
 
     <div id="hole3" class="hole">
-      <img src="assets/hole.png" alt="Hole"><!--Mole hole-->
-      <div id="mole3" class="mole"><img src="assets/mole2.png" alt="Mole"></div> <!--Mole-->
+      <img src="assets/hole.png" alt="Hole"> <!--Hole image-->
+      <div id="mole3" class="mole"><img src="assets/mole2.png" alt="Mole"></div> <!--Mole image-->
     </div>
     <div id="hole4" class="hole">
-      <img src="assets/hole.png" alt="Hole">
-      <div id="mole4" class="mole"><img src="assets/mole.png" alt="Mole"></div> <!--Mole hole-->
+      <img src="assets/hole.png" alt="Hole"> <!--Hole image-->
+      <div id="mole4" class="mole"><img src="assets/mole.png" alt="Mole"></div> <!--Mole image-->
     </div>
     <div id="hole5" class="hole">
-      <img src="assets/hole.png" alt="Hole"> <!--Mole hole-->
-      <div id="mole5" class="mole"><img src="assets/mole2.png" alt="Mole"></div> <!--Mole-->
+      <img src="assets/hole.png" alt="Hole"> <!--Hole image-->
+      <div id="mole5" class="mole"><img src="assets/mole2.png" alt="Mole"></div> <!--Mole image-->
     </div>
     <div id="hole6" class="hole">
-      <img src="assets/hole.png" alt="Hole"> <!--Mole hole-->
-      <div id="mole6" class="mole"><img src="assets/mole.png" alt="Mole"></div> <!--Mole-->
+      <img src="assets/hole.png" alt="Hole"> <!--Hole image-->
+      <div id="mole6" class="mole"><img src="assets/mole.png" alt="Mole"></div> <!--Mole image-->
     </div>
     <div id="hole7" class="hole">
-      <img src="assets/hole.png" alt="Hole"><!--Mole hole-->
-      <div id="mole7" class="mole"><img src="assets/mole2.png" alt="Mole"></div> <!--Mole-->
+      <img src="assets/hole.png" alt="Hole"> <!--Hole image-->
+      <div id="mole7" class="mole"><img src="assets/mole2.png" alt="Mole"></div> <!--Mole image-->
     </div>
     <div id="hole8" class="hole">
-      <img src="assets/hole.png" alt="Hole"><!--Mole hole-->
-      <div id="mole8" class="mole"><img src="assets/mole.png" alt="Mole"></div> <!--Mole-->
+      <img src="assets/hole.png" alt="Hole"> <!--Hole image-->
+      <div id="mole8" class="mole"><img src="assets/mole.png" alt="Mole"></div> <!--Mole image-->
     </div>
   </div>
   <script src="./src/index.js"></script>
