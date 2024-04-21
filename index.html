@@ -13,6 +13,13 @@
   <div class="controls">
     <button id="startButton">Start</button>
   </div>
+  <div>
+    <h2>Click start to play!</h2>
+    <div class="container">
+      <h2>Score: <span id="score">0</span></h2> 
+      <h2>Time: <span id="timer">0</span> seconds left.</h2>
+    </div>
+  </div>
   <div class="difficulty">
     <div>
       <input type="radio" name="level" id="easy">
@@ -27,16 +34,8 @@
       <label for="hard">Hard</label>
     </div>
   </div>
-  <div>
-    <h2>Click start to play!</h2>
-    <div>
-      <h1 id="score">0</h1>
-    </div>
-    <div>
-      <h1><span id="timer">0</span> seconds left.</h1>
-    </div>
-  </div>
-  
+ 
+
   <div class="game-over-message" id="gameOverMessage" style="display: none;">
     Time's Up!
   </div>
