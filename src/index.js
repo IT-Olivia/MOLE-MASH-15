@@ -196,7 +196,7 @@ function toggleVisibility(hole) {
 *
 */
 function updateScore() {
-  const score = document.querySelector('#score > span');
+  const score = document.querySelector('#score');
   points++;
   score.textContent = points;
   console.log("Score updated. New score:", points);
@@ -263,7 +263,7 @@ function startTimer() { /* Starts timer*/
 */
 function whack(event) {
   // TODO: Write your code here.
-  console.log("whack!");
+  console.log("Mole whacked!");
   updateScore(); //Updates score each time mole is whacked
 }
 
@@ -336,5 +336,8 @@ window.time = time;
 window.setDuration = setDuration;
 window.toggleVisibility = toggleVisibility;
 window.setEventListeners = setEventListeners;
+
+
+
 
 
