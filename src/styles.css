@@ -11,7 +11,7 @@ html {
   overflow: hidden;
 }
 
-h1 {
+h1 { /* Styles all h1 elements*/
   text-align: center;
   font-size: 50px;
   font-family: "Comic Sans MS", "Comic Sans", cursive;
@@ -20,7 +20,7 @@ h1 {
   margin-bottom: 0;
 }
 
-h2 {
+h2 { /* Styles all h2 elements*/
   text-align: left;
   font-size: 30px;
   color: #0000ff;
@@ -28,7 +28,7 @@ h2 {
   margin-bottom: 80px;
 }
 
-#startButton {
+#startButton { /* Styles start button*/
   text-align: center;
   padding: 10px 25px;
   outline: none;
@@ -43,14 +43,15 @@ h2 {
 
 #timer {
   color: #ffff00; /* Yellow color */
-  font-size: 40px; /* Font size of 20 pixels */
+  font-size: 40px; /* Font size of 40 pixels */
   text-align: left; /*Align timer to left*/
   margin-left: 20px;
 }
 
 .mallet-cursor {
-  cursor: url("assets/mallet.png"), auto;
+  cursor: url("assets/mallet.png"), auto; /* Changes cursor to mallet*/
 }
+
 
 .grid {
   width: 800px;
@@ -58,7 +59,7 @@ h2 {
   display: flex;
   flex-wrap: wrap;
   margin: 0 auto;
-  cursor: url("assets/mallet.png"), pointer;
+  cursor: url("assets/mallet.png"), pointer; /* Changes cursor into mallet*/
 }
 
 
@@ -70,8 +71,7 @@ h2 {
   position: relative;
   width: 33.33%;
   height: 33.33%;
-  top: -90%;
-  
+  top: -90%; /* Allows all holes to shift upward on the screen */
 }
 
 
@@ -106,8 +106,8 @@ h2 {
 }
 
 .mole img {
-  width: 80px; /* Adjust the width as needed */
-  height: auto; /* Maintain aspect ratio */
+  width: 80px; 
+  height: auto; 
   align-items: right center;
   position: relative;
   left: 50%;
@@ -140,7 +140,7 @@ h2 {
   box-sizing: border-box;
 }
 
-.game-over-message {
+.game-over-message { /* Styles game over message when timer is 0 */
   position: absolute;
   top: 50%;
   left: 50%;
@@ -154,5 +154,3 @@ h2 {
   display: none;
   text-align: top right;
 }
-
-
