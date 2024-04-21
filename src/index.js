@@ -1,55 +1,55 @@
-const holes = document.querySelectorAll('.hole');
-const moles = document.querySelectorAll('.mole');
-let time = 25;
-let timer;
-let lastHole = 0;
-let points = 0;
-let difficulty = "hard";
-const timerDisplay = document.querySelector('#timer');
-/**
- * Generates a random integer within a range.
- *
- * The function takes two values as parameters that limits the range 
- * of the number to be generated. For example, calling randomInteger(0,10)
- * will return a random integer between 0 and 10. Calling randomInteger(10,200)
- * will return a random integer between 10 and 200.
- *
- */
-function startGame() {
-  // Reset the game
-  const gameOverMessage = document.getElementById('gameOverMessage');
-  gameOverMessage.style.display = 'none'; // Hide the message when game starts
+const holes = document.querySelectorAll('.hole'); //Selects all elemets with class hole
+const moles = document.querySelectorAll('.mole'); //Selects all elemets with class mole
+let time = 25; //Sets timer at 25 seconds
+let timer; //Used for game timing functions
+let lastHole = 0; //Keeps track of last hole
+let points = 0; //Starts point at 0
+let difficulty = "hard"; //Sets game default difficulty to hard
+const timerDisplay = document.querySelector('#timer'); //Selects elements with id timer
 
-  setDuration(25);
-  startTimer();
-  showUp();
-  playAudio('assets/molesong.mp3');
-  document.body.classList.add('mallet-cursor');
-  score = 0;
+function startGame() {  //Starts game
+
+  document.body.classList.add('mallet-cursor'); //Turns cursor into mallet
+  const gameOverMessage = document.getElementById('gameOverMessage'); //Displays message when timer is 0
+  gameOverMessage.style.display = 'none'; 
+
+  setDuration(25); //Sets game timer to 25 seconds
+  startTimer(); // Starts game timer when start button clicked
+  showUp(); //Prompts moles to show when start button clicked
+  playAudio('assets/molesong.mp3'); //Plays mole song
+  score = 0; //Resets score to 0
   return "game started";
 }
 
 
-function randomInteger(min, max) {
-  return Math.floor(Math.random() * (max - min + 1)) + min;
+function randomInteger(min, max) { /*Generates a random integer within a range.*/
+  return Math.floor(Math.random() * (max - min + 1)) + min; /*
+  * The function takes two values as parameters that limits the range 
+  * of the number to be generated. For example, calling randomInteger(0,10)
+  * will return a random integer between 0 and 10. Calling randomInteger(10,200)
+  * will return a random integer between 10 and 200
+  */
 }
-console.log("A random integer between 0 and 8");
-console.log(randomInteger(0, 8));
+console.log("A random integer between 0 and 8"); 
+console.log(randomInteger(0, 8)); //Calls ramdon integer function
 console.log("Another random integer between 0 and 8");
 console.log(randomInteger(0, 8));
-console.log("A random number between 600 and 1200");
+console.log("A random number between 600 and 1200"); //Generates random number between 600 and 1200
 console.log(randomInteger(600, 1200));
 
 const startButton = document.getElementById('startButton');
 console.log(startButton);
 
 if (startButton) {
-  startButton.addEventListener("click", startGame);
+  startButton.addEventListener("click", startGame); //Starts game when start button clicked
 }
 
-
 document.addEventListener('DOMContentLoaded', () => {
-  setEventListeners();  // Set up the mole clicking events after the page has loaded
+  const startButton = document.getElementById('startButton'); //Retrieves startButton element id
+  if (startButton) { //Checks to see if there is a startButton
+    startButton.addEventListener('click', startGame); //Executes start game function
+  }
+  setEventListeners();  
 });
 
 /**
@@ -67,7 +67,7 @@ document.addEventListener('DOMContentLoaded', () => {
  * setDelay("hard") //> returns 856 (returns a random number between 600 and 1200).
  *
  */
-function setDelay(difficulty) {
+function setDelay(difficulty) { //Sets time delay based on difficulty
   // TODO: Write your code here.
   if (difficulty === "easy") {
     return 1500; // 1.5 seconds
@@ -120,19 +120,12 @@ function chooseHole(holes) { //Selects a random hole from the list of holes
 * return the timeoutId if the game continues or the string "game stopped"
 * if the game is over.
 *
-*  // if time > 0:
-*  //   timeoutId = showUp()
-*  //   return timeoutId
-*  // else
-*  //   gameStopped = stopGame()
-*  //   return gameStopped
-*
 */
 function gameOver(time) {
   if (time > 0) {
     return showUp(); // Game continues
   } else {
-    console.log('Game over!'); // If time reaches zero
+    console.log('Game over!'); // Shows when time reaches zero
     stopGame(); // Stops the game
     return "game stopped";
   }
@@ -213,9 +206,6 @@ function updateScore() {
 *
 */
 function clearScore() {
-  // TODO: Write your code here
-  // points = 0;
-  // score.textContent = points;
   points = 0;
   const scoreSpan = document.querySelector('#score');
   scoreSpan.textContent = points;
@@ -228,8 +218,6 @@ function clearScore() {
 * Updates the control board with the timer if time > 0
 *
 */
-
-
 function updateTimer() {  /*Updates timer*/
   // TODO: Write your code here.
   // hint: this code is provided to you in the instructions.
@@ -302,14 +290,12 @@ function setDuration(duration) {
 *
 */
 function stopGame() {
-  clearInterval(timer);
-
-  // Display the "Time's Up!" message
-  const gameOverMessage = document.getElementById('gameOverMessage');
+  clearInterval(timer); //Stops game timer
+  const gameOverMessage = document.getElementById('gameOverMessage'); // Displays the "Time's Up!" message
   gameOverMessage.style.display = 'block'; // Make the message visible
 
-  clearScore();
-  document.body.classList.remove('mallet-cursor');
+  clearScore(); //Resets game score to 0
+  document.body.classList.remove('mallet-cursor'); //Changes cursor back to default cursor
 
   console.log("Game stopped, score reset, timer cleared.");
   return "game stopped";
@@ -319,7 +305,7 @@ function stopGame() {
 
 
 
-function playAudio(audioPath) {
+function playAudio(audioPath) { //Plays mole song during game play
   const audio = new Audio(audioPath);
   audio.play();
 }
