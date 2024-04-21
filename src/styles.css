@@ -28,7 +28,7 @@ h2 {
   margin-bottom: 80px;
 }
 
-.startButton {
+#startButton {
   text-align: center;
   padding: 10px 25px;
   outline: none;
